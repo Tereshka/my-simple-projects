@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bubble Sorting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://robohash.org/bubleSorting?set=set4" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+</head>
+<body>
+    <h1>Сортировка массива методом пузырька (Bubble Sort)</h1>
+
+    <div class="buttons">
+        <div class="choose-character">
+            <input id="superheroes" type="radio" name="character" value="superheroes" checked><label for="superheroes">Супергерои</label>
+            <input id="kittens" type="radio" name="character" value="kittens"><label for="kittens">Котики</label>
+        </div>
+        <button id="randomGenerate">1 шаг. Сгенерировать массив</button>
+        <button id="sorting" disabled>2 шаг. Сортировать массив</button>
+        <span id="comment"></span>
+    </div>
+    
+    <div id="content"></div>
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>

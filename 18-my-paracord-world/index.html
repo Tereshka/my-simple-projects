@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Paracord world</title>
+  <link rel="icon" type="image/png" href="paracord-logo.png">
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="google-site-verification" content="qQ7YZBwmEFTFUS7tQA2yo5gLqjcZuRsNeEpUEH3XLF4" />
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+  <!-- Bootstrap core CSS     -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/css/bootstrap.min.css">
+  <link href="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/css/now-ui-kit.min.css?v1.2.0" rel="stylesheet"/>
+  <link href="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/demo/demo.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html{
+        scroll-behavior:smooth;
+    }
+    .navbar .navbar-nav .nav-link:not(.btn) i.fa{
+      font-size: 18px;
+      position: relative;
+      top: 3px;
+      text-align: center;
+      width: 21px;
+    }
+    .page-header .page-header-image{
+        background-position: 0;
+    }
+    .steps{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .steps:hover{
+        border: 2px dashed #ff3636;
+        border-radius: 25px;
+    }
+    .images-preview{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    #button-order{
+        transition: ease 0.5s;
+    }
+    #button-order:hover{
+        transform: scale(1.1);
+    }
+  </style>
+
+</head>
+
+<body class="index-page sidebar-collapse">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-danger fixed-top navbar-transparent" color-on-scroll="400">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" rel="tooltip" title="Paracord People" data-placement="bottom" target="_blank">
+                    <img src="paracord-logo.png" alt="logo" width="80">
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" data-nav-image="img/blurred-image-1.jpg">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="What are Paracord People?" data-placement="bottom" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Construct your personal man" data-placement="bottom" href="#SetUpMan">Set your man</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Write to order" data-placement="bottom" href="#Order">Order now</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Write us in WhatsApp" data-placement="bottom" href="https://api.whatsapp.com/send?phone=79246721203" target="_blank">
+                            <i class="fa fa-whatsapp"></i>
+                            <p class="d-lg-none d-xl-none">WhatsApp</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Write us in Telegram" data-placement="bottom" href="https://t.me/tereshka07" target="_blank">
+                            <i class="fa fa-telegram"></i>
+                            <p class="d-lg-none d-xl-none">Telegram</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Write us on Facebook" data-placement="bottom" href="https://www.facebook.com/lenchik.tereshka" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/tereshka07" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                            <p class="d-lg-none d-xl-none">Instagram</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="wrapper">
+        <div class="page-header clear-filter" filter-color="orange">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('img/image4.jpg');">
+            </div>
+            <div class="container">
+                <div class="content-center brand">
+                    <!-- <img class="n-logo" src="paracord-logo.png" alt=""> -->
+                    <h1 class="h1-seo">PARACORD PEOPLE</h1>
+                    <h3>We can help you to find something new and interesting</h3>
+                    <a id="button-order" class="btn btn-round btn-simple btn-lg btn-neutral" href="#Order">Make an order</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <!-- ABOUT section -->
+            <div class="section section-basic">
+                <div id="About" class="container my-5">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-right" data-aos="flip-right" data-aos-duration="1000">
+                            <img class="img-fluid" src="img/image5.png" alt="paracord-people" >
+                        </div>
+                        
+                        <div class="col-12 col-sm-3 align-self-center pl-3" data-aos="flip-right" data-aos-duration="1000">
+                            <h3 class="title text-center">What are they?</h3>
+                            <ul>
+                                <li>New word in presents</li>
+                                <li>Funny friend</li>
+                                <li>Key ring</li>
+                                <li>Life-saver</li>
+                                <li>Your personal pocket superhero</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAROUSEL section -->
+            <div class="section section-basic bg-light">
+                <div class="container my-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-12" data-aos="zoom-in" data-aos-duration="1000">
+                            <h3 class="title text-center">Look in action</h3>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item text-center">
+                                        <img class="img-fluid" src="img/image1.jpg" alt="First slide" >
+                                        <div class="carousel-caption d-none d-md-block">
+                                        <h5>Different superheroes are available</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item text-center">
+                                        <img class="img-fluid" src="img/image2.jpg" alt="Second slide" >
+                                        <div class="carousel-caption d-none d-md-block">
+                                        <h5>You can use them as a key ring</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item active text-center">
+                                        <img class="img-fluid" src="img/image3.jpg" alt="Third slide" >
+                                        <div class="carousel-caption d-none d-md-block">
+                                        <h5>Choose your favourite character</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <i class="now-ui-icons arrows-1_minimal-left"></i>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <i class="now-ui-icons arrows-1_minimal-right"></i>
+                                </a>
+                                <p  id="SetUpMan"></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>   
+            </div> 
+
+            <!-- SET UP section -->
+            <div class="section section-basic">
+                <div class="container text-center my-5">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <h3 class="title">Assemble your own Paracord man in a few steps:</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4" data-aos="flip-left" data-aos-duration="1000">
+                            <img class="img img-fluid steps" src="img/icon-para.png" alt="paracord">
+                            <div>1. Choose a color<br/>of paracord</div>
+                        </div>
+                        <div class="col-lg-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                            <img class="img img-fluid steps" src="img/icon-lego.png" alt="head">
+                            <div>2. Choose your<br/>favourite character</div>
+                        </div>
+                        <div class="col-lg-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="800">
+                            <img class="img img-fluid steps" src="img/icon-size.png" alt="size">
+                            <div>3. Choose size</div>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="1000">
+                            <h3 class="title">and then...</h3>
+                            <a href="#Order"><img class="img img-fluid steps" src="img/icon-order.png" alt="buy"></a>
+                            <div id="Order">...just make an order</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRICE section -->
+            <div class="section section-basic">
+                <div class="container text-center mt-5" >
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="title">So, what a price?</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="blockquote blockquote-danger">
+                                Our prices start just <b>from $7,89!</b><br>
+                                The more complecated paracord man you set up, the more price will be.
+                                <br><br>
+                                * BUT we have a special code for our first customers: <b>SALE20</b><br>
+                                Use it and get 20% sale!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORDER section -->
+            <div class="section section-basic bg-light">
+                <div  class="container text-center mt-5">
+                    <h3 class="title">How to order?</h3>
+                    <div class="row">
+                        <div class="col">
+                            <a class="btn btn-lg btn-round btn-danger btn-simple" rel="tooltip" title="Write us in WhatsApp" data-placement="bottom" href="https://api.whatsapp.com/send?phone=79246721203" target="_blank" data-aos="flip-down" data-aos-duration="1000">
+                                <i class="fa fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a class="btn btn-lg btn-round btn-danger btn-simple" rel="tooltip" title="Write us in Telegram" data-placement="bottom" href="https://t.me/tereshka07" target="_blank" data-aos="flip-down" data-aos-duration="1000">
+                                <i class="fa fa-telegram"></i> Telegram
+                            </a>
+                            <a class="btn btn-lg btn-round btn-danger btn-simple" rel="tooltip" title="Write us on Facebook" data-placement="bottom" href="https://www.facebook.com/lenchik.tereshka" target="_blank" data-aos="flip-down" data-aos-duration="1000">
+                                <i class="fa fa-facebook-square"></i> Facebook
+                            </a>
+                            <a class="btn btn-lg btn-round btn-danger btn-simple" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/tereshka07" target="_blank" data-aos="flip-down" data-aos-duration="1000">
+                                <i class="fa fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBSCRIBE section -->   
+            <div class="section section-basic bg-light">
+                <div class="container text-center mb-5">
+                    <h3 class="title">And don't forget to subscribe to our news:</h3>
+                    <div class="row">
+                        <div class="col card card-signup py-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <form action="https://tilda.us18.list-manage.com/subscribe/post?u=9db6d611d4d290665d8b9c488&amp;id=3a7c90d78d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                            <i class="now-ui-icons ui-1_email-85"></i>
+                                            </span>
+                                        </div>
+                                        <input type="email" value="" name="EMAIL" class="form-control form-control-danger" id="mce-EMAIL" placeholder="email address" required>
+                                    </div>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9db6d611d4d290665d8b9c488_3a7c90d78d" tabindex="-1" value=""></div>
+                                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-round btn-lg btn-danger" ></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREVIEW section -->
+            <div class="section section-basic">
+                <div class="container text-center my-5">
+                    <div class="row">
+                        <div class="col" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="img/image-darth.jpg" alt="Thumbnail Image" class="images-preview">
+                        </div>
+                        <div class="col" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="img/image-batman-key.jpeg" alt="Thumbnail Image" class="images-preview">
+                        </div>
+                        <div class="col" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="img/image-batman.jpeg" alt="Thumbnail Image" class="images-preview">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer" data-background-color="black">
+                <div class="container">
+                    <div class="text-center">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());</script>, Developed by
+                        <a href="https://github.com/Tereshka" target="_blank">Tereshka</a>. Using
+                        <a href="https://www.creative-tim.com" target="_blank">now-ui-kit (Creative Tim)</a>.
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+<!--   Core JS Files   -->
+<script src="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/js/core/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/js/core/popper.min.js"></script>
+<script src="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/js/core/bootstrap.min.js"></script>
+<!-- Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ 
+Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+
+<script src="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/js/plugins/bootstrap-switch.js"></script>
+<script src="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/js/plugins/nouislider.min.js"></script>
+<script src="https://cdn.rawgit.com/creativetimofficial/now-ui-kit/2e8e665f/assets/js/now-ui-kit.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+    </div>
+
+</body>
+</html>

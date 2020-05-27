@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ex12</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .football {
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .field {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .ball {
+      position: absolute;
+      top: 50% ;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+    }
+    area:hover{
+      border: 0.5px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div class="football">
+    <img usemap="#gatesmap" class="field" src="img/field.jpg">
+    <img class="ball" src="img/ball.png">
+</div>
+
+<map name="gatesmap">
+  <area id="left" shape="rect" coords="0,460,105,620" nohref alt="left">
+  <area id="right" shape="rect" coords="1820,460,1925,620" nohref alt="right">
+</map>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/imageMapResizer.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+  
+  $(document).ready(function() {
+    $('map').imageMapResize();
+  restartGame();
+  
+});
+</script>
+</body>
+</html>

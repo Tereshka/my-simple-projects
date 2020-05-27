@@ -1,0 +1,67 @@
+body, html{
+    margin: 0;
+    background-color: #f5f5f5;
+}
+.container{
+    margin-top: 65px;
+}
+h2{
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+#label-empty{
+    color: #8993ad;
+}
+.todo-task{
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+.todo-task-name{
+    padding: 20px;
+}
+.todo-task .todo-task-name .button-delete{
+    color: #ff0000;
+    margin-left: 20px;
+}
+.todo-task .todo-task-name .button-delete:hover
+    ,.todo-task .todo-task-name .button-open:hover
+    ,.todo-task .todo-task-name .button-close:hover{
+    color: #8993ad;
+}
+.todo-task .todo-task-name .button-open{
+    float: right;
+    display: none;
+}
+.todo-task .todo-task-name .button-close{
+    float: right;
+}
+.todo-task .label{
+    color: #8993ad;
+    font-size: 14px;
+    border-top: 1px solid #f5f5f5;
+    padding: 20px;
+    min-height: 80px;
+}
+
+#form{
+    background-color: #ffffff;
+    padding: 30px 40px;
+}
+#form label{
+    color: #8993ad;
+    font-size: 14px;
+}
+.form-control{
+    background-color: #fcfcfc;
+    border-radius: 0 !important;
+}
+#form textarea{
+    height: 20em !important;
+    background-color: #fcfcfc;
+}
+#form .btn-primary{
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 0 !important;
+}

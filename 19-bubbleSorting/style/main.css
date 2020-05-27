@@ -1,0 +1,112 @@
+html, body{
+    margin: 20px;
+    padding: 0;
+    background-color: #F9F871;
+}
+body, button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.buttons{
+    margin: 20px 0;
+}
+
+button{
+    margin-left: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(#845EC2, #D65DB1);
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(#FF6F91, #FF9671);
+}
+button:disabled, button[disabled]{
+    border: 1px solid #999999;
+    background: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+   pointer-events: none;
+}
+
+.choose-character input{
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+.choose-character label {
+    float: left;
+}
+.choose-character label {
+    display: inline-block;
+    background-color: #e4e4e4;
+    text-align: center;
+    padding: 10px 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+}
+.choose-character label:hover {
+	cursor: pointer;
+}
+.choose-character input:checked + label {
+  background: linear-gradient(#845EC2, #D65DB1);
+  color: #ffffff;
+  box-shadow: none;
+}
+.choose-character label:first-of-type {
+  border-radius: 20px 0 0 20px;
+}
+.choose-character label:last-of-type {
+  border-radius: 0 20px 20px 0;
+}
+
+#content{
+    display: flex;
+}
+
+.img-array{
+    position: relative; 
+    margin: 5px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.number{
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000, 0 0 25px #845EC2, 0 0 5px #845EC2;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+}
+#comment{
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .choose-character label{
+        float: none;
+    }
+    .buttons{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
