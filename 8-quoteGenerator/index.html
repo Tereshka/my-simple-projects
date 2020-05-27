@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<title>Random Quote</title>
+	<style type="text/css">
+		body, html {
+		  height: 100%;
+		  display: grid;
+		}
+		body{
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="jumbotron jumbotron-fluid border border-primary rounded mx-auto my-auto shadow-lg p-3">
+	  <div class="container">
+	    <h1 >Random Quote</h1>
+		  <hr class="my-4 bg-primary">
+		  <h3><i class = "fa fa-quote-left"></i><span id="text"></span><i class="fa fa-quote-right"></i></h3>
+		  <h5 id="author" class="font-weight-light font-italic"></h5>
+		  <div class="d-flex flex-row justify-content-between pt-2">
+		  	<button class="btn btn-primary btn-lg" onclick="getJoke()">New Quote</button>
+		  	<a id = "tweet_btn" target = "_blank" class="btn btn-primary btn-lg text-white" onclick="updateTweet()" ><i class="fa fa-twitter"></i> Tweet</a>
+		  </div>
+	  </div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

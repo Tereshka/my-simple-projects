@@ -1,0 +1,34 @@
+body {
+  margin: 0 auto;
+  position: relative;
+}
+
+#welcome-section{
+	top: 0;
+	min-height: 55vh;
+	padding-top: 45vh;
+	box-sizing: content-box;
+
+	/* The image used */
+    background-image: linear-gradient(to left, rgba(141,158,171,0.5), rgba(238,242,243,0.5)),
+    					url("../img/background.jpg");
+
+    /* Full height */
+    /*height: auto;*/
+    /* width: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-shadow: 0.1px 0.1px 0.1px rgba(0,0,0, 1),
+    			 0px 4px 3px rgba(0,0,0, 0.8),
+				 0px 8px 13px rgba(0,0,0, 0.2),
+				 0px 18px 23px rgba(0,0,0, 0.2);
+}
+hr{
+	width: 60%;
+	border-top:  1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0, 0.6);
+}

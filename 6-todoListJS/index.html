@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ToDo List</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="container">
+		<h1>To-Do List<i class="fas fa-plus" onclick="showInput()"></i></h1>
+		<input onkeypress="pushToDo(this)" type="text" placeholder="Add New ToDo" style="display: none;">
+
+		<ul>
+			<li onclick="liDone(this)"><span class="but-delete" onclick="deleteAction(this)"><i class="fas fa-trash-alt"></i></span>Create list</li>
+			<li onclick="liDone(this)"><span class="but-delete" onclick="deleteAction(this)"><i class="fas fa-trash-alt"></i></span>Shopping</li>
+			<li onclick="liDone(this)"><span class="but-delete" onclick="deleteAction(this)"><i class="fas fa-trash-alt"></i></span>Wash the dishes</li>
+		</ul>
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

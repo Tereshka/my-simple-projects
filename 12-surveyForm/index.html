@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Form</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description" class="font-italic">This is a simple survey form for FreeCodeCamp task</p>
+        <form id="survey-form">
+            <div class="form-group row">
+                <label id="name-label" for="name" class="col-md-2 col-form-label">Your name</label>
+                <div class="col-md-10"><input type="text" class="form-control" id="name" placeholder="Jhon" required></div>
+            </div>
+            <div class="form-group row">
+                <label id="email-label" for="email" class="col-md-2 col-form-label">Email address</label>
+                <div class="col-md-10"><input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="something@email.com" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small></div>
+            </div>
+            <div class="form-group row">
+                <label id="number-label" for="number" class="col-md-2 col-form-label">Age</label>
+                <div class="col-md-10"><input type="number" class="form-control" id="number" min=15 max=100 value="15" placeholder="15"></div>
+            </div>
+            <div class="form-group row">
+                <label for="dropdown" class="col-md-2 col-form-label">How are you?</label>
+                <div class="col-md-10"><select class="form-control" id="dropdown">
+                        <option>Great</option>
+                        <option>Good</option>
+                        <option>So-so</option>
+                        <option>Pretty bad</option>
+                        <option>Don't ask</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="radioSex" class="col-md-2 col-form-label">What is your sex?</label>
+                <div class="col-md-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioSex" id="male" value="Male" checked>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioSex" id="female" value="Female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioSex" id="noSex" value="NoSex">
+                        <label class="form-check-label" for="noSex">I don't want to tell</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="checkAnimal" class="col-md-2 col-form-label">What is your favourite animal?</label>
+                <div class="col-md-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkAnimal" id="dogs" value="Dogs">
+                        <label class="form-check-label" for="dogs">Dogs</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkAnimal" id="cats" value="Cats">
+                        <label class="form-check-label" for="cats">Cats</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkAnimal" id="birds" value="Birds">
+                        <label class="form-check-label" for="birds">Birds</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkAnimal" id="fish" value="Fish">
+                        <label class="form-check-label" for="fish">Fish</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="comment" class="col-md-2 col-form-label">Any Comments or Suggestions?</label>
+                <div class="col-md-10"><textarea class="form-control" id="comment" rows="3" placeholder="Write your notes here..."></textarea></div>
+            </div>
+
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Tests for FreeCodeCamp task - Survey Form
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    -->
+    
+</body>
+</html>

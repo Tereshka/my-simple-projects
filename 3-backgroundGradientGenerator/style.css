@@ -1,0 +1,42 @@
+body{
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	background: linear-gradient(to right, #ffffff, #000000);
+	opacity: 0.8;
+	margin: 0 auto;
+}
+h1{
+	font: 500 2.5rem 'Raleway', sans-serif;
+	word-wrap: break-word;
+	letter-spacing: 0.4em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+h3{
+	letter-spacing: 0.01em;
+	opacity: 1;
+	text-transform: none;
+	font-family: 'Montserrat', sans-serif;
+}
+input{
+	border-radius: .5rem;
+	border: 1px solid #dddddd;
+	height: 40px;
+	width: 100px;
+	outline: none;
+}
+.generate{
+	margin-top: 1em;
+	font-family: 'Raleway', sans-serif;
+	height: 40px;
+	width: 150px;
+	background-color: #ffffff;
+}
+.generate:hover{
+	background-color: transparent;
+}
+.generate:active{
+	background-color: #ffffff;
+}
+
