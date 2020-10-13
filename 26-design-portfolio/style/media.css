@@ -1,0 +1,137 @@
+@media screen and (max-width: 767px) {
+  .section-hello {
+    background: none;
+    background-color: #fbfbfb;
+  }
+  .section-hello .container {
+    padding: 10px 0;
+  }
+  .section-hello__information {
+    padding-bottom: 20px;
+  }
+  .section-hello__portrait {
+    background: url("../img/figure.svg") no-repeat center bottom;
+    background-size: auto 100%;
+    margin: 20px 0;
+  }
+  .section-hello__name {
+    font-size: 30px;
+    text-align: center;
+  }
+  .section-hello__title {
+    font-size: 16px;
+    text-align: center;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .h3 {
+    font-size: 28px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .navbar-right {
+    width: 83%;
+  }
+  .navbar-right__icon{
+    display: inline;
+  }
+  .navbar-right__button {
+    display: none;
+  }
+  .navbar-right__text {
+    font-size: 18px;
+    margin-right: auto!important;
+    margin-left: auto!important;
+  }
+  .flying-elements_position_1 {
+    top: 15px;
+    left: 80px;
+  }
+  .flying-elements_position_2 {
+    top: 160px;
+    left: 100px;
+  }
+  .flying-elements_position_3 {
+    top: 20px;
+    left: 250px;
+  }
+  .flying-elements_position_4 {
+    top: 270px;
+    left: 30px;
+  }
+  .flying-elements_white {
+    display: none;
+  }
+  .button-action {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .section-price {
+    padding: 50px 0;
+  }
+  .nav-item-footer {
+    font-size: 15px;
+  }
+  .nav-item-footer__span {
+    font-size: 20px;
+  }
+  .button-call_background_white {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .copyright {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .section-hello__information {
+    padding-bottom: 20px;
+  }
+  .section-hello__name {
+    font-size: 54px;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .flying-elements_position_2 {
+    top: 370px;
+    left: 100px;
+  }
+  .flying-elements_position_3 {
+    top: 400px;
+    left: 400px;
+  }
+  .flying-elements_position_4 {
+    top: 100px;
+    left: 430px;
+  }
+  .flying-elements_position_5 {
+    display: none;
+  }
+  .flying-elements_position_6 {
+    top: 80px;
+    left: 980px;
+  }
+  .flying-elements_position_7 {
+    top: 250px;
+    left: 900px;
+  }
+  .flying-elements_position_9 {
+    top: 40px;
+    left: 100px;
+  }
+  .flying-elements_position_10 {
+    top: 250px;
+    left: 30px;
+  }
+}

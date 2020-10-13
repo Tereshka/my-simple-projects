@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#0058ab">
+	<meta name="msapplication-TileColor" content="#0058ab">
+	<meta name="theme-color" content="#0058ab">
+	<title>Корзина - IKEA</title>
+	<link rel="stylesheet" href="styles/styles.css">
+
+  <script src="script/index.js" defer type="module"></script>
+</head>
+<body>
+<main>
+	<div class="container cart-wrapper">
+		<h2 class="cart-header">Корзина</h2>
+		<ul class="cart-list">
+		</ul>
+		<div class="cart-total">
+			<span class="cart-total-label">Сумма</span>
+			<span class="cart-total-price">297.-</span>
+		</div>
+
+		<form id="form" class="cart-form">
+			<label>
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label>
+			<label>
+				<input type="email" name="email" placeholder="Ваш email">
+			</label>
+			<button type="submit" class="cart-checkout">Оформить</button>
+		</form>
+	</div>
+</main>
+</body>
+</html>

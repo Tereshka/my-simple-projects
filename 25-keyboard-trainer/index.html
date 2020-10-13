@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Клавиатурный тренажер</title>
+	<!-- <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap&subset=cyrillic-ext" rel="stylesheet">
+
+</head>
+<body>
+	
+	<!-- Logo and Results -->
+	<div class="container">
+		<div class="logo">
+			<i class="fas fa-keyboard"></i><span id="title">DD</span>
+		</div>
+		<div class="results locales">
+			<div class="indicators">
+				<div class="indicator">
+					<label><input class="indicator__name locale" type="radio" value="RU" name="locale" checked/>RU</label>
+				</div>
+				<div class="indicator">
+					<label><input class="indicator__name locale" type="radio" value="EN" name="locale" />EN</label>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Results -->
+		<div class="results ">
+			<div class="results-title"></div>
+			<div class="indicators">
+				<div class="indicator">
+					<div class="indicator__icon">
+						<i class="fas fa-tachometer-alt"></i>
+					</div>
+					<div class="indicator__name symbols"></div>
+					<div class="indicator__value wordsSpeed">0</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator__icon">
+						<i class="fas fa-clock"></i>
+					</div>
+					<div class="indicator__name words"></div>
+					<div class="indicator__value correctSymbols">0</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator__icon indicator__icon--errors">
+						<i class="fas fa-exclamation-circle"></i>
+					</div>
+					<div class="indicator__name errors"></div>
+					<div class="indicator__value errorsProcent">0%</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Results -->
+
+	</div>
+	<!-- // Logo and Results -->
+
+	<div class="devider"></div>
+
+	<div class="container">
+
+		<!-- Input field -->
+		<input id="input"
+				type="text" 
+				class="input" 
+				placeholder="" 
+				value=""
+		>
+
+		<!-- Text for input -->
+		<!-- <div class="text error"> -->
+		<div class="text" id="textExample"></div>
+		
+		<!-- Keyboard-->
+		<div class="keyboard"></div>
+	</div>
+
+	<!-- Copyright -->
+	<div class="devider"></div>
+	<div class="container">
+		<div class="copyright">
+			
+		</div>
+	</div>
+
+	<script src="js/main.js" type="module"></script>
+</body>
+
+</html>

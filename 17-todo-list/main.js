@@ -1,10 +1,14 @@
 function addTask(){
+    var name = document.getElementById('todoName').value;
+    var description = document.getElementById('todoDescription').value;
+
+    if (name === '' || description === '') {
+        return;
+    }
+
     if(document.getElementById('label-empty') != null){
         document.getElementById('label-empty').remove();
     }
-
-    var name = document.getElementById('todoName').value;
-    var description = document.getElementById('todoDescription').value;
 
     document.getElementById('todoName').value = "";
     document.getElementById('todoDescription').value = "";
