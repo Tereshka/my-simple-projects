@@ -1,5 +1,5 @@
 # Graduation project for SkillBox course "Веб-вёрстка для начинающих 2.0"
-[LIVE DEMO](https://tereshka.github.io/design-portfolio/)
+[LIVE DEMO](https://tereshka.github.io/my-simple-projects/26-design-portfolio/index.html)
 <br>
 This projects shows my current skills in HTML, CSS and a little bit of JS.
 <br>

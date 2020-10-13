@@ -90,6 +90,12 @@ const generateCartPage = () => {
 
     cartForm.addEventListener('submit', e => {
       e.preventDefault();
+
+      if (userData.cartList.length === 0) {
+        alert('Добавьте товар в корзину');
+        return;
+      }
+
       const formData = new FormData(cartForm);
 
       // if need to send formdata
