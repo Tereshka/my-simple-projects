@@ -6,7 +6,7 @@ const PARAMETER = {
 
 export const getData = {
   // url: 'database/dataBase.json',
-  url: 'https://raw.githubusercontent.com/tereshka/ikea-shop/main/database/dataBase.json',
+  url: 'https://raw.githubusercontent.com/Tereshka/my-simple-projects/master/24-ikea-shop-clone/database/dataBase.json',
 
   async getResource(url) {
     const res = await fetch(url);
