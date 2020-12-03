@@ -17,6 +17,10 @@ async function init() {
   fillTable(users);
 }
 
+/**
+ * Load data from url
+ * @param {string} url 
+ */
 async function getResource(url) {
   const res = await fetch(url);
   if (!res.ok) {
@@ -26,7 +30,7 @@ async function getResource(url) {
 }
 
 /**
- * Load data from the file to the table
+ * Fill table with provided data
  */
 function fillTable(users) {
   for (let i = 0; i < users.length; i++) {
@@ -108,6 +112,10 @@ function createDeleteButton(id) {
   return button;
 }
 
+/**
+ * Create form for editing existing user
+ * @param {User} user 
+ */
 function createEditForm(user) {
   const form = document.createElement('form');
   form.setAttribute('id', `form-edit-${user.id}`);
@@ -123,6 +131,10 @@ function createEditForm(user) {
   return form;
 }
 
+/**
+ * Update information about user with provided id
+ * @param {number} id 
+ */
 function updateUser(id) {
   let error = '';
   showError(error, id);
@@ -134,7 +146,7 @@ function updateUser(id) {
     error = 'Name is empty. ';
   }
   const phone = document.querySelector(`#field-phone-${id}`).value;
-  if (!/^\+?\d+/gm.test(phone)){
+  if (phone === '' || !/^\+?[\d-]+$/gm.test(phone)) {
     error += 'Phone is empty OR is not correct.';
   }
   if (error !== '') {
@@ -151,6 +163,10 @@ function updateUser(id) {
   hideForm(id);
 }
 
+/**
+ * Hide editing form
+ * @param {number} id 
+ */
 function hideForm(id) {
   const user = users.find(el => el.id === id);
 
@@ -164,7 +180,7 @@ function hideForm(id) {
 }
 
 /**
- * get max id value from the user lists
+ * Get max id value from the user lists
  */
 function getMaxId() {
   return Math.max(...users.map(el => el.id));
@@ -187,7 +203,7 @@ function addUser(e) {
 
   const fieldPhone = document.querySelector('#field-phone');
   const phone = fieldPhone.value;
-  if (phone === '' || !/\+?\d+/gm.test(phone)){
+  if (phone === '' || !/^\+?[\d-]+$/gm.test(phone)) {
     error += 'Phone is empty OR is not correct.';
   }
 
