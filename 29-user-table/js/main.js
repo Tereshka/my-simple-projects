@@ -1,17 +1,18 @@
-const URL = 'https://raw.githubusercontent.com/Tereshka/my-simple-projects/master/29-user-table/js/data.json'
+const URL = 'https://raw.githubusercontent.com/Tereshka/my-simple-projects/master/29-user-table/js/data.json';
+let users = [];
 let tableBody = null;
 let buttonAddUser = null;
 
 /**
  * Main method. Init all functionality
  */
-function init() {
+async function init() {
   tableBody = document.querySelector('#table-body');
   buttonAddUser = document.querySelector('#button-add-user');
 
   buttonAddUser.addEventListener('click', (e) => addUser(e));
 
-  let users = getResource(URL);
+  users = await getResource(URL);
 
   fillTable(users);
 }
@@ -43,16 +44,27 @@ function createNewRow(user) {
   row.setAttribute('id', `row-user-${user.id}`);
 
   const tdName = document.createElement('td');
+  tdName.setAttribute('id', `row-user-name-${user.id}`);
   tdName.textContent = user.name;
+  
   const tdPhone = document.createElement('td');
+  tdPhone.setAttribute('id', `row-user-phone-${user.id}`);
   tdPhone.textContent = user.phone;
+  
   const tdButtonEdit = document.createElement('td');
   tdButtonEdit.appendChild(createEditButton(user.id));
   const tdButtonDelete = document.createElement('td');
   tdButtonDelete.appendChild(createDeleteButton(user.id));
 
+  const tdForm = document.createElement('td');
+  tdForm.setAttribute('id', `row-user-form-${user.id}`);
+  tdForm.setAttribute('colspan', 2);
+  tdForm.appendChild(createEditForm(user));
+  tdForm.style.display = 'none';
+
   row.appendChild(tdName);
   row.appendChild(tdPhone);
+  row.appendChild(tdForm);
   row.appendChild(tdButtonEdit);
   row.appendChild(tdButtonDelete);
 
@@ -65,13 +77,15 @@ function createNewRow(user) {
  */
 function createEditButton(id) {
   const button = document.createElement('button');
+  button.setAttribute('id', `row-user-button-edit-${id}`);
   button.textContent = 'Edit';
   button.setAttribute('class', 'btn btn-primary');
 
   button.addEventListener('click', (e) => {
-    const currentRow = document.querySelector(`#row-user-${id}`);
-
-    
+    document.querySelector(`#row-user-name-${id}`).style.display = 'none';
+    document.querySelector(`#row-user-phone-${id}`).style.display = 'none';
+    document.querySelector(`#row-user-form-${id}`).style.display = 'table-cell';
+    document.querySelector(`#row-user-button-edit-${id}`).style.display = 'none';
   });
 
   return button;
@@ -92,6 +106,61 @@ function createDeleteButton(id) {
   });
 
   return button;
+}
+
+function createEditForm(user) {
+  const form = document.createElement('form');
+  form.setAttribute('id', `form-edit-${user.id}`);
+  form.setAttribute('class', 'form-inline ml-3 mb-3');
+  form.innerHTML = `<label class="sr-only" for="field-name">Name</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="field-name-${user.id}" placeholder="Jane Doe" value=${user.name}>
+    <label class="sr-only" for="field-phone">Phone</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="field-phone-${user.id}" placeholder="+0000000000" value=${user.phone}>
+    <span id="field-error${user.id}" class="error"></span>
+    <button id="button-save-user-${user.id}" type="button" class="btn btn-primary mb-2" onclick="updateUser(${user.id})">Save</button>
+    <button id="button-cancel-user-${user.id}" type="button" class="btn btn-danger mb-2" onclick="hideForm(${user.id})">Cancel</button>`;
+
+  return form;
+}
+
+function updateUser(id) {
+  let error = '';
+  showError(error, id);
+
+  const user = users.find(el => el.id === id);
+
+  const name = document.querySelector(`#field-name-${id}`).value;
+  if (name === '') {
+    error = 'Name is empty. ';
+  }
+  const phone = document.querySelector(`#field-phone-${id}`).value;
+  if (!/^\+?\d+/gm.test(phone)){
+    error += 'Phone is empty OR is not correct.';
+  }
+  if (error !== '') {
+    showError(error, id);
+    return;
+  }
+
+  user.name = name;
+  user.phone = phone;
+
+  document.querySelector(`#row-user-name-${id}`).textContent = name;
+  document.querySelector(`#row-user-phone-${id}`).textContent = phone;
+
+  hideForm(id);
+}
+
+function hideForm(id) {
+  const user = users.find(el => el.id === id);
+
+  document.querySelector(`#field-name-${id}`).value = user.name;
+  document.querySelector(`#field-phone-${id}`).value = user.phone;
+  document.querySelector(`#row-user-name-${id}`).style.display = 'table-cell';
+  document.querySelector(`#row-user-phone-${id}`).style.display = 'table-cell';
+  document.querySelector(`#row-user-form-${id}`).style.display = 'none';
+  document.querySelector(`#row-user-button-edit-${id}`).style.display = 'table-cell';
+  showError('', id);
 }
 
 /**
@@ -142,10 +211,7 @@ function addUser(e) {
  * Show error message 
  * @param {string} text 
  */
-function showError(text) {
-  const errorSpan = document.querySelector('.error');
+function showError(text, id = '') {
+  const errorSpan = document.querySelector(`#field-error${id}`);
   errorSpan.textContent = text;
-  console.log(text)
 }
-
-init();

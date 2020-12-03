@@ -19,7 +19,7 @@
     }
   </style>
 
-  <script src="js/main.js" type="module" defer></script>
+  <script src="js/main.js" type="text/javascript"></script>
 </head>
 <body>
   <header>
@@ -32,7 +32,7 @@
       <input type="text" class="form-control mb-2 mr-sm-2" id="field-name" placeholder="Jane Doe">
       <label class="sr-only" for="field-phone">Phone</label>
       <input type="text" class="form-control mb-2 mr-sm-2" id="field-phone" placeholder="+0000000000">
-      <span class="error"></span>
+      <span id="field-error" class="error"></span>
       <button id="button-add-user" type="submit" class="btn btn-primary mb-2">Add user</button>
     </form>
 
@@ -49,5 +49,6 @@
       </tbody>
     </table>
   </main>
+  <script>init();</script>
 </body>
 </html>
