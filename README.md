@@ -6,6 +6,9 @@ I have taken part in different courses for frontend development. Now I have a lo
 
 ## Changelog
 
+__03/12/2020__
+add new projects: 28-canvas-exercise, 29-user-table
+
 __13/10/2020__  
 add new projects: 24-ikea-shop-clone, 25-keyboard-trainer, 27-portfolio  
 remove repository and move files here: 26-design-portfolio
