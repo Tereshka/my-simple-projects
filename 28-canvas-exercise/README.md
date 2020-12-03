@@ -1,6 +1,5 @@
-# Funny exercise with canvas"
-[LIVE DEMO](https://tereshka.github.io/my-simple-projects/28-canvas-exercise/index.html)
-<br>
+# Funny exercise with canvas [LIVE DEMO](https://tereshka.github.io/my-simple-projects/28-canvas-exercise/index.html)
+
 Task:
 - create 2 canvas
 - draw 5 stars filled different colors on the biggest canvas
