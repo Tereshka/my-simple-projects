@@ -107,6 +107,7 @@ function createDeleteButton(id) {
   button.addEventListener('click', (e) => {
     const currentRow = document.querySelector(`#row-user-${id}`);
     tableBody.removeChild(currentRow);
+    users = users.filter(el => el.id !== id);
   });
 
   return button;
@@ -212,13 +213,15 @@ function addUser(e) {
     return;
   }
 
-  const row = createNewRow({
+  const newUser = {
     id: getMaxId() + 1,
     name,
     phone,
-  });
+  };
+  users.push(newUser);
+  const row = createNewRow(newUser);
   tableBody.appendChild(row);
-
+  
   fieldName.value = '';
   fieldPhone.value = '';
 }
